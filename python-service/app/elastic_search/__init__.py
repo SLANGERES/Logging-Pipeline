@@ -1,0 +1,1 @@
+from .elastic_search import es as es_instance,add_to_elastic_search
