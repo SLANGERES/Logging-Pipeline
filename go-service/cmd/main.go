@@ -1,14 +1,18 @@
 package main
 
 import (
+	"log"
 
 	router "github.com/SLANGERES/go-service/internal/Routers"
-
 )
 
-func main(){
-	router:=router.Router()
+func StartServer(addr string) {
+	r := router.Router()
+	if err := r.Run(addr); err != nil {
+		log.Fatalf("failed to start server: %v", err)
+	}
+}
 
-	router.Run(":9090")
-	
+func main() {
+	StartServer(":9090")
 }

@@ -1,9 +1,8 @@
 
 from elasticsearch import Elasticsearch
 
-es = Elasticsearch(
-    hosts=["http://elasticsearch:9200"]  # use service name, not localhost
-)
+
+es = Elasticsearch("http://localhost:9200") 
 
 
 index_name = "logs"

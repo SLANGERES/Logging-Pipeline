@@ -4,7 +4,7 @@ from Rabbit_mq import callback
 def main():
     # Step 1: Connect to RabbitMQ
     connection = pika.BlockingConnection(
-        pika.ConnectionParameters(host="rabbitmq")
+        pika.ConnectionParameters(host="localhost")
     )
     channel = connection.channel()
 
