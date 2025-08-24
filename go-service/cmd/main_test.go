@@ -14,6 +14,7 @@ func TestMainStartup(t *testing.T) {
 
 	// Use httptest server (no need to run r.Run())
 	ts := httptest.NewServer(r)
+
 	defer ts.Close()
 
 	// Call /health endpoint
